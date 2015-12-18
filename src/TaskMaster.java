@@ -225,9 +225,8 @@ public class TaskMaster extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblctask, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4)
-                        .addComponent(lbltottask, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel4)
+                    .addComponent(lbltottask, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnfirst)
@@ -347,6 +346,13 @@ public class TaskMaster extends javax.swing.JFrame {
     }//GEN-LAST:event_mnuexitActionPerformed
 
     private void mnurestorectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnurestorectActionPerformed
+        //restore when there are no tasks
+       if(tottask==0){
+          curtask++;
+          tottask++;
+          lbltottask.setText(""+tottask);
+       }
+       //normal running code
        lblctask.setText(""+curtask);
        txtname.setText(t.getName());
        txtdesc.setText(t.getDesc());
