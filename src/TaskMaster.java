@@ -317,11 +317,16 @@ public class TaskMaster extends javax.swing.JFrame {
             lblctask.setText("n/a");
             return;
         }
-        //or go to previous task to show it
-        else{
+        //or go to previous task to show it if not on the first task
+        else if(curtask>1){
             t=li.previous();
             curtask--;
             lblctask.setText(""+curtask);
+        }
+        //if on the first task
+        else{
+            li.next();
+            t=li.previous();
         }
         
         txtname.setText(t.getName());
