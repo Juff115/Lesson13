@@ -356,7 +356,6 @@ public class TaskMaster extends javax.swing.JFrame {
        lblctask.setText(""+curtask);
        txtname.setText(t.getName());
        txtdesc.setText(t.getDesc());
-       
     }//GEN-LAST:event_mnurestorectActionPerformed
 
     private void mnuclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuclearActionPerformed
